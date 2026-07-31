@@ -93,7 +93,6 @@ def run_ablation():
     rects2 = ax.bar(x + width/2, results_recall, width, label='Recall')
 
     ax.set_ylabel('Score')
-    ax.set_title('Ablation Study: Static vs Dynamic Penalty')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()

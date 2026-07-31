@@ -102,7 +102,6 @@ def main():
     
     plt.xlabel("Verification Latency (Number of Transactions Delayed)")
     plt.ylabel("Geometric Mean (G-Mean)")
-    plt.title("Performance Degradation under Delayed Labels (ULB Dataset)")
     plt.legend()
     plt.grid(True, linestyle=':', alpha=0.7)
     

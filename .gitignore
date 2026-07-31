@@ -1,0 +1,40 @@
+# LaTeX & Document files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.tex
+*.pdf
+*.bib
+*.md
+*.txt
+*.docx
+requirements.txt
+README.md
+main_manuscript.tex
+main_manuscript.pdf
+
+# Virtual Environment & Python cache
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data and Literature
+data/
+*.csv
+references/
+*.ris
+
+# Temporary files
+temp*
+draft_*
+uncited*
+
+springer_evolutionary_biology/
+notebooks/
+figures/

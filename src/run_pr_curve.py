@@ -77,6 +77,7 @@ def collect_predictions(d_name, m_name, model_class, kwargs):
 
 def main():
     datasets = ["ULB", "PaySim", "IEEE-CIS"]
+    panel_labels = ["(a)", "(b)", "(c)"]
     models = [
         ("ARF", AdaptiveRandomForestClassifier, {"n_models": 10, "seed": 42}),
         ("Dynamic CS-ARF", CSARFv2, {"gamma": 2.0, "alpha": 0.999, "lambda_cap": 100.0, "precision_threshold": 0.3})
@@ -110,7 +111,12 @@ def main():
             ax.plot(recall, precision, linestyle=line_style, color=color, 
                     label=f'{m_name} (AUC = {auc_pr:.3f})')
             
-        ax.set_title(f'{d_name} Dataset')
+        # Panel label (a)/(b)/(c) instead of a descriptive title, per
+        # Springer figure guidelines ("Do not include titles or captions
+        # within your illustrations"; "Figure parts should be denoted by
+        # lowercase letters"). The dataset name for each panel is given in
+        # the LaTeX \caption{} instead.
+        ax.set_title(panel_labels[i], loc='left', fontweight='bold')
         ax.set_xlabel('Recall')
         ax.set_ylabel('Precision')
         ax.set_xlim([0.0, 1.0])

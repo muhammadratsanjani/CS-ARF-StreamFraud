@@ -130,7 +130,6 @@ def main():
     plt.text(20500, 0.1, 'Concept Drift 1', rotation=90, color='gray', fontsize=12)
     plt.text(40500, 0.1, 'Concept Drift 2', rotation=90, color='gray', fontsize=12)
     
-    plt.title('Rolling Recall vs Time (Agrawal Stream with 1% Imbalance)')
     plt.xlabel('Transactions Processed')
     plt.ylabel('Rolling Recall (Window=3000)')
     plt.ylim([0.0, 1.05])
